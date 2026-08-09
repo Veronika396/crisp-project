@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crisp - Магазин потужного одягу</title>
+  <link rel="stylesheet" href="css/modern-normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/catalog.css">
+  <link rel="icon" href="image/logo.png" type="image/png">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body id="bod">
+   <!-- ========== oleg ========== -->
+  <header>
+    <a href="#bod"><img id="logo" src="Image/Group 4.svg" alt="lerka" /></a>
+
+    <nav>
+      <a href="index.html">HOME</a>
+      <a class="ah" href="catalog.html">SHOP</a>
+      <a href="blog.html">BLOG</a>
+      <a href="#">SALE</a>
+      <a href="#">CONTACT US</a>
+      <a href="#" id="smopen"><img src="Image/Group 3.svg" alt="lerka" /> <span>search</span></a>
+    </nav>
+
+    <div class="bob">
+      <a href="#" id="lmopen">SIGN IN</a>
+      <a href="#">CREATE AN ACCOUNT</a>
+      <a href="dashboard.html" class="heard"><img src="Image/Vector.svg" alt="lera" /></a>
+      <button id="bmopen">
+        <div class="bmopen">
+          <img src="Image/baggg.svg" alt="bag">
+          <div class="bmopentxt">
+            <p>shopping cart</p>
+            <p>0.00 EUR</p>
+          </div>
+        </div>
+      </button>
+    </div>
+  </header>
+   <!-- ========== yarik modal&header ========== -->
+  <div id="searchmodal">
+    <div class="smthing">
+      <img src="Image/sea.svg" alt="magi" />
+      <input type="text" placeholder="Search" />
+    </div>
+    <button id="smclose"><img src="Image/Frame 3.svg" alt="cross" /></button>
+  </div>
+  <div id="loginmodal">
+    <div class="fon"></div>
+    <button id="lmclose"><img src="Image/Frame 3.svg" alt="cross" /></button>
+    <form action="">
+      <h2>login your account</h2>
+      <input type="email" placeholder="Email" id="lmemail" required />
+      <input type="password" placeholder="Password" id="lmpassword" required />
+      <div class="lmformthing">
+        <input type="checkbox" id="lmformcheck" required />
+        <p>
+          By using this form you agree with the storage and handling of your
+          data by this website.
+        </p>
+      </div>
+      <div class="lmbtn">
+        <button>sign in</button>
+        <button>create an account</button>
+      </div>
+    </form>
+
+  </div>
+  <div id="bagmodal">
+    <button id="bmclose"><img src="Image/Frame 3.svg" alt="cross"></button>
+    <div id="bmbought"></div>
+    <div class="bmmenu">
+      <hr>
+      <div class="bmmcount">
+        <p>cart subtotal:</p>
+        <p>0.00 EUR</p>
+      </div>
+      <div class="bmmbtn">
+        <button>view and edit cart</button>
+        <button>go to checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Shoping without limits.</h1>
+        <p>
+          You can choose the best option for you, and it does not matter whether
+          you are in Prague or San Francisco. We will deliver your purchase
+          anywhere!
+        </p>
+        <a href="#" class="shop-btn">Shop now</a>
+      </div>
+      <div class="hero-img">
+        <img src="Image/Rectangle 7.1 copy.svg" alt="model" />
+      </div>
+    </section>
+    
+    <div class="breadcrumb">
+      <a href="#">Home</a> / <a href="#">Womens Dress</a> / <span>Best Chose</span>
+    </div>
+
+    <div class="shop-layout">
+      <aside class="sidebar">
+        <div class="filter-block">
+          <div class="filter-title">
+            <h3>Brand</h3>
+            <span class="toggle">–</span>
+          </div>
+          <div class="filter-list">
+            <label><input type="checkbox" /> state</label>
+            <label><input type="checkbox" /> cooper</label>
+            <label><input type="checkbox" checked /> bardot</label>
+            <label><input type="checkbox" /> alfani</label>
+            <label><input type="checkbox" /> cece</label>
+            <label><input type="checkbox" /> donna ricco</label>
+          </div>
+        </div>
+
+        <div class="filter-block">
+          <div class="filter-title">
+            <h3>Size (Inches)</h3>
+          </div>
+          <div class="size-grid">
+            <button>05FA</button><button>W26</button><button>W27</button><button>W28</button><button>W29</button>
+            <button>W30</button><button>W31</button><button
+              class="active">W32</button><button>W33</button><button>W34</button>
+            <button>W35</button><button>W36</button><button>W38</button><button>W40</button><button>W42</button>
+            <button>W44</button><button>W46</button><button>W48</button><button>W50</button><button>W52</button>
+          </div>
+        </div>
+
+        <div class="filter-block">
+          <div class="filter-title">
+            <h3>Dress length</h3>
+            <span class="toggle">–</span>
+          </div>
+          <div class="filter-list">
+            <label><input type="checkbox" /> short</label>
+            <label><input type="checkbox" /> knee length</label>
+            <label><input type="checkbox" checked /> hight low</label>
+            <label><input type="checkbox" /> long</label>
+            <label><input type="checkbox" /> midi</label>
+          </div>
+        </div>
+
+        <div class="filter-block">
+          <div class="filter-title">
+            <h3>Color</h3>
+            <span class="toggle">–</span>
+          </div>
+          <div class="color-grid">
+            <span class="swatch swatch-black"></span>
+            <span class="swatch swatch-white"></span>
+            <span class="swatch swatch-green active"></span>
+            <span class="swatch swatch-purple"></span>
+            <span class="swatch swatch-gray"></span>
+            <span class="swatch swatch-navy"></span>
+            <span class="swatch swatch-brown"></span>
+            <span class="swatch swatch-gold"></span>
+            <span class="swatch swatch-maroon"></span>
+            <span class="swatch swatch-pink"></span>
+            <span class="swatch swatch-teal"></span>
+          </div>
+        </div>
+
+        <div class="filter-block">
+          <div class="filter-title">
+            <h3>Price Range</h3>
+            <span class="toggle">–</span>
+          </div>
+          <div class="price-range">
+            <div class="price-values">
+              <span>0,00 EUR</span>
+              <span>250,00 EUR</span>
+            </div>
+            <input type="range" min="0" max="250" value="180" />
+            <button class="apply-btn">apply</button>
+          </div>
+        </div>
+
+        <div class="filter-block">
+          <div class="filter-title collapsed">
+            <h3>Dress Length</h3>
+            <span class="toggle">+</span>
+          </div>
+        </div>
+
+        <div class="about-dresses">
+          <h3>About Dresses</h3>
+          <p>
+            Every day we're gonna be dropping the latest trends to help you nail
+            every Summer sitch. Whether it's a graduation, your mate's wedding, or
+            just a cute day at the races with the gals, our occasion dresses have
+            got you covered. Not looking for something fancy? No stress. We've got
+            day dresses for days (aka bodycon dresses, t-shirt dresses, oversized
+            shirt dresses).
+          </p>
+        </div>
+      </aside>
+
+      <div class="content">
+        <div class="content-toolbar">
+          <select class="sort-select">
+            <option>PRICE (HIGH TO LOW)</option>
+            <option>PRICE (LOW TO HIGH)</option>
+            <option>NEWEST</option>
+          </select>
+          <select class="perpage-select">
+            <option>48</option>
+            <option>24</option>
+            <option>12</option>
+          </select>
+        </div>
+
+        <div class="product-grid">
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7.svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-green"></span>
+              <span class="swatch swatch-gray"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7 (1).svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-lightblue"></span>
+              <span class="swatch swatch-pink"></span>
+              <span class="swatch swatch-red"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7 (2).svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-gray"></span>
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-gold"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/bo.svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-cream"></span>
+              <span class="swatch swatch-mauve"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7. redsvg.svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-green"></span>
+              <span class="swatch swatch-gray"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7 (4).svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-lightblue"></span>
+              <span class="swatch swatch-pink"></span>
+              <span class="swatch swatch-red"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7 (1).svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-gray"></span>
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-gold"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7 (6).svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-cream"></span>
+              <span class="swatch swatch-mauve"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/bo.svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-green"></span>
+              <span class="swatch swatch-gray"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7.svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-lightblue"></span>
+              <span class="swatch swatch-pink"></span>
+              <span class="swatch swatch-red"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7. redsvg.svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-gray"></span>
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-gold"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7 (6).svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-cream"></span>
+              <span class="swatch swatch-mauve"></span>
+            </div>
+          </div>
+        </div>
+
+        <section class="promo-banner">
+          <div class="promo-text">
+            <h2>Shoping without limits.</h2>
+            <p>
+              You can choose the best option for you, and it does not matter
+              whether you are in Prague or San Francisco. We will deliver your
+              purchase anywhere!
+            </p>
+            <a href="#" class="shop-btn shop-btn-light">Shop now</a>
+          </div>
+          <div class="promo-img">
+            <img src="Image/blackgirl.png" alt="model" />
+          </div>
+        </section>
+
+        <div class="product-grid">
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7.svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-green"></span>
+              <span class="swatch swatch-gray"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7 (1).svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-lightblue"></span>
+              <span class="swatch swatch-pink"></span>
+              <span class="swatch swatch-red"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7 (2).svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-gray"></span>
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-gold"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/bo.svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-cream"></span>
+              <span class="swatch swatch-mauve"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7. redsvg.svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-green"></span>
+              <span class="swatch swatch-gray"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7 (4).svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-lightblue"></span>
+              <span class="swatch swatch-pink"></span>
+              <span class="swatch swatch-red"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7 (1).svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-gray"></span>
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-gold"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7 (6).svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-cream"></span>
+              <span class="swatch swatch-mauve"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/bo.svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-green"></span>
+              <span class="swatch swatch-gray"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7.svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-lightblue"></span>
+              <span class="swatch swatch-pink"></span>
+              <span class="swatch swatch-red"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7. redsvg.svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-gray"></span>
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-gold"></span>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-img">
+              <img src="Image/Rectangle 7 (6).svg" alt="dress" />
+            </div>
+            <p class="product-cat">Top women</p>
+            <p class="product-title">Angels malu zip jeans slim black used</p>
+            <p class="product-price">139,00 EUR</p>
+            <div class="product-colors">
+              <span class="swatch swatch-navy"></span>
+              <span class="swatch swatch-cream"></span>
+              <span class="swatch swatch-mauve"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <section class="sc3">
+      <div class="sc3thing">
+        <img src="Image/checkmark.svg" alt="checkmark" />
+        <p>Duties and Taxes Guaranteed</p>
+      </div>
+      <div class="sc3thing">
+        <img src="Image/checkmark.svg" alt="checkmark" />
+        <p>Free Express Shipping</p>
+      </div>
+      <div class="sc3thing">
+        <img src="Image/checkmark.svg" alt="checkmark" />
+        <p>Customer Love</p>
+      </div>
+      <div class="sc3thing">
+        <img src="Image/checkmark.svg" alt="checkmark" />
+        <p>Easy Returns</p>
+      </div>
+      <div class="sc3thing">
+        <img src="Image/checkmark.svg" alt="checkmark" />
+        <p>Secure Payment</p>
+      </div>
+    </section>
+  </main>
+ 
+   <footer>
+   <a href="#bod"><img src="Image/logo.svg" alt="logo" /></a>
+    <div class="fthing">
+      <h2>features</h2>
+      <div class="fthingig">
+        <a href="#">men</a>
+        <a href="#">women</a>
+        <a href="#">boys</a>
+        <a href="#">girls</a>
+        <a href="#">new arrivals</a>
+        <a href="#">shoes</a>
+        <a href="#">clothes</a>
+        <a href="#">accessories</a>
+      </div>
+    </div>
+    <div class="fthing">
+      <h2>menu</h2>
+      <div class="fthingig">
+        <a href="#">about us</a>
+        <a href="#">contact us</a>
+        <a href="#">my account</a>
+        <a href="#">orders history</a>
+        <a href="#">my wishlist</a>
+        <a href="#">blog</a>
+        <a href="#">login</a>
+      </div>
+    </div>
+    <div class="fthing">
+      <h2>contact us</h2>
+      <div class="fthingig">
+        <div class="fthingin">
+          <p style="margin-top: -5px;">adress:</p>
+          <a href="https://www.google.com/maps?q=123+Street+Name,+City,+England" target="_blank">123 street name, city, england</a>
+        </div>
+        <div class="fthingin">
+          <p>phone:</p>
+          <a href="tel:+11234567890">(123) 456-7890</a>
+        </div>
+        <div class="fthingin">
+          <p>email:</p>
+          <a href="mailto:mail@example.com">mail@example.com</a>
+        </div>
+        <div class="fthingin">
+          <p>working days/hours</p>
+          <a>mon - sun / 9:00am - 8:00pm</a>
+        </div>
+      </div>
+    </div>
+    <div class="fthing">
+      <h2>follow us</h2>
+      <div class="fthingig">
+        <div class="fthingin2">
+          <img src="Image/facebook.svg" alt="facebook" />
+          <a href="https://www.facebook.com/" target="_blank">facebook</a>
+        </div>
+        <div class="fthingin2">
+          <img src="Image/twitter 2.svg" alt="twitter" />
+          <a href="https://x.com/" target="_blank">twitter</a>
+        </div>
+        <div class="fthingin2">
+          <img src="Image/instagram-photo-camera-symbol.svg" alt="instagram" />
+          <a href="https://www.instagram.com/" target="_blank">instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="fthing">
+      <h2>join us</h2>
+      <div class="fthingig fform">
+        <p>Subscribe to our newsletters</p>
+        <input type="text" placeholder="email adress" />
+        <button class="btn">subscribe!</button>
+      </div>
+    </div>
+    <div class="bottom">
+      <hr />
+      <p>© 2026. Crisp theme Developed by GoIteens group FE_7_18_02_25✌🏻</p>
+    </div>
+  </footer>
+</body>
+
+</html>
